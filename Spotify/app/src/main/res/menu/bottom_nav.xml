@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Inicio"
+        android:id="@+id/inicio"
+        android:icon="@drawable/ic_outline_home_24" />
+
+    <item android:title="Buscar"
+        android:id="@+id/buscar"
+        android:icon="@drawable/ic_baseline_search_24" />
+
+    <item android:title="Tu biblioteca"
+        android:id="@+id/biblioteca"
+        android:icon="@drawable/ic_outline_playlist_play_24" />
+
+    <item android:title="Spotify"
+        android:id="@+id/spotify"
+        android:icon="@drawable/spotify_logo"/>
+</menu>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/blankFragment">
+
+    <fragment
+        android:id="@+id/blankFragment"
+        android:name="com.utad.ud2_ej.BlankFragment"
+        android:label="Gestión de empleados"
+        tools:layout="@layout/fragment_blank">
+        <action
+            android:id="@+id/action_blankFragment_to_login2"
+            app:destination="@id/login" />
+    </fragment>
+    <fragment
+        android:id="@+id/login"
+        android:name="com.utad.ud2_ej.Login"
+        android:label="Introduce tus credenciales"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_login_to_homeFragment2"
+            app:destination="@id/homeFragment2"
+            app:exitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment2"
+        android:name="com.utad.ud2_ej.HomeFragment2"
+        android:label="Lista de empleados"
+        tools:layout="@layout/fragment_home2" >
+        <argument
+            android:name="origen_login"
+            app:argType="boolean" />
+        <argument
+            android:name="email"
+            app:argType="string" />
+        <argument
+            android:name="password"
+            app:argType="string" />
+        <argument
+            android:name="nombre"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="apellidos"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="fecha_nacimiento"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+</navigation>
